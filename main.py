@@ -1,17 +1,17 @@
 input = open("day1Input.txt")
-fat_elf = 0;
-most_cal = 0;
+cals= []
 elf = 0
 total = 0
 for item in input:
     if item == "\n":
-        if total > most_cal:
-            most_cal = total
-            fat_elf = elf
+        cals.append(total)
         ++elf
         total = 0
     else:
         total += int(item)
         
-print(most_cal)
+cals.sort(reverse=True)
+top3tot = cals[0] + cals[1] + cals[2]
+        
+print(top3tot)
         
