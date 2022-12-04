@@ -23,9 +23,9 @@ def part2(in_file):
     with open(in_file) as inp:
         group = []
         for bag in inp:
-            if len(group) != 3:
+            if len(group) != 2:
                 group.append(bag)
-            if len(group) == 3:
+            else:
                 priority_num = 0
                 for item in bag:
                     if group[0].count(item) != 0 and group[1].count(item) != 0:
